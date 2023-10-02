@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Weather App</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<h1>Weather Display</h1>
+<section id="outerContainer">
+  <div id="searchContainer">
+      <input type="text" id="searchField" placeholder="Enter city name" required>
+      <button id="searchBtn" onclick="searchButtonOnclicked()">Search</button>   
+  </div>
+  <ul class="currentWeather">
+
+      <li class="detailContainer-1">
+        <div>
+            <h2 id="locationName">Location </h2>
+        </div>
+        <img src="./img/sun_weather.png" alt="" id="img">
+        <div class="temperatureDetailContainer">  
+            <label for="temperature" id="lblTemp">28 °C</label> 
+        </div>
+      </li>
+
+      <li class="detailContainer">
+          <div class="a">
+            <label for="lblName" id="lblName">Wind  </label>
+            <div class="separator"></div>
+            <label for="Wind" id="lblWind"></label>
+          </div>
+        </li>
+
+        <li class="detailContainer">
+          <div class="a">
+            <label for="" id="lblName">Humidity  </label>
+            <div class="separator"></div>
+            <label for="Humidity" id="lblHumidity"></label>
+          </div>
+        </li>
+        
+        <li class="detailContainer">
+          <div class="a">
+            <label for="" id="lblName">UV  </label>
+            <div class="separator"></div>
+            <label for="UV" id="lblUv"></label>
+          </div>
+        </li>
+        
+        <li class="detailContainer">
+          <div class="a">
+            <label for="" id="lblName">Clouds  </label>
+            <div class="separator"></div>
+            <label for="Clouds" id="lblClouds"></label>
+          </div>
+        </li>    
+  </ul>
+
+  <div class="forecastContainer">
+  <h2>Weather forecast</h2>
+  <ul class="weatherForecast-chart">
+    <li class="card">
+      <h3 id="date">Date</h3>
+      <h4 id="temparature">Temperature</h4>
+      <h4 id="dailyChanceofRain"></h4>
+      <h4 id="precipitation"></h4>
+      <h4 id="weatherCondition">Weather Condition</h4>
+      <img src= "//cdn.weatherapi.com/weather/64x64/day/302.png" alt="" id="imgForecast">
+      <h4 id="humidity">Humidity</h4> 
+    </li>
+
+    <li class="card">
+      <h3 id="date1">Date</h3>
+      <h4 id="temparature1">Temperature</h4>
+      <h4 id="dailyChanceofRain1"></h4>
+      <h4 id="precipitation1"></h4>
+      <h4 id="weatherCondition1">Weather Condition</h4>
+      <img src= "//cdn.weatherapi.com/weather/64x64/day/302.png" alt="" id="imgForecast1">
+      <h4 id="humidity1">Humidity</h4>
+    </li>
+
+    <li class="card">
+      <h3 id="date2">Date</h3>
+      <h4 id="temparature2">Temperature</h4>
+      <h4 id="dailyChanceofRain2"></h4>
+      <h4 id="precipitation2"></h4>
+      <h4 id="weatherCondition2">Weather Condition</h4>
+      <img src= "//cdn.weatherapi.com/weather/64x64/day/302.png" alt="" id="imgForecast2">
+      <h4 id="humidity2">Humidity</h4>
+    </li>
+
+    <li class="card">
+      <h3 id="date3">Date</h3>
+      <h4 id="temparature3">Temperature</h4>
+      <h4 id="dailyChanceofRain3"></h4>
+      <h4 id="precipitation3"></h4>
+      <h4 id="weatherCondition3">Weather Condition</h4>
+      <img src= "//cdn.weatherapi.com/weather/64x64/day/302.png" alt="" id="imgForecast3">
+      <h4 id="humidity3">Humidity</h4>
+    </li>
+
+    <li class="card">
+      <h3 id="date4">Date</h3>
+      <h4 id="temparature4">Temperature</h4>
+      <h4 id="dailyChanceofRain4"></h4>
+      <h4 id="precipitation4"></h4>
+      <h4 id="weatherCondition4">Weather Condition</h4>
+      <img src= "//cdn.weatherapi.com/weather/64x64/day/302.png" alt="" id="imgForecast4">
+      <h4 id="humidity4">Humidity</h4>
+    </li>
+  </ul>
+</div>
+</section>
+<script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+  <script src="script.js"></script>
+</body>
+</html>
