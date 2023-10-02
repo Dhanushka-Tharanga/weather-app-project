@@ -40,7 +40,7 @@ let idPrecipitation4=$("#precipitation4");
 let idImgForecast4=$("#imgForecast4");
 let idHumidity4=$("#humidity4");
 let idWeatherCondition4=$("#weatherCondition4");
-//--------------------1--------------
+//----------------------------------
 //=========================================================================================================================
 
 const searchButtonOnclicked  = ()=>{
@@ -51,7 +51,8 @@ const searchButtonOnclicked  = ()=>{
           fetch(url).then (response=>response.json())
                     .then(data => displayTemperature(data))
 
-     weatherForecastData(city);              
+     weatherForecastData(city);  
+             
 }    
 
 const setInnerText = (id, text) => {
@@ -62,15 +63,15 @@ const setInnerText = (id, text) => {
 const displayTemperature=temparature => {
     console.log(temparature)
     setInnerText('locationName',temparature.location.name)
-    setInnerText('lblTemp',temparature.current.temp_c)
-    setInnerText('lblWind',temparature.current.wind_kph)
+    setInnerText('lblTemp',temparature.current.temp_c+"°C")
+    setInnerText('lblWind',temparature.current.wind_kph + "kmph")
     setInnerText('lblHumidity',temparature.current.humidity)
     setInnerText('lblUv',temparature.current.uv)
     setInnerText('lblClouds',temparature.current.cloud)
 
     
 }
-        
+    
 //=========================================================================================================================      
   function weatherForecastData(city){
 
@@ -122,8 +123,28 @@ const displayTemperature=temparature => {
         idPrecipitation4.text("Precipitation : "+data["forecast"]["forecastday"]["4"]["day"]["totalprecip_mm"]+"mm");
         idHumidity4.text("Humidity : "+data["forecast"]["forecastday"]["4"]["day"]["avghumidity"]);
 
+
+           
+
       }
     })
+    weatherHistryData(city);
+    
   }
 
-//==================================================================End=======================================================    
+//==================================================================Histrical weather data=======================================================    
+function weatherHistryData(city){
+
+let dateHistry =$("#dateHistry");
+
+  $.ajax({
+    method : "GET",
+    url : ` http://api.weatherapi.com/v1/history.json?key=811fbc17af7e4e02a4a111501232209&dt=2023-09-01&q=${city}`,
+    success :(data) =>{
+      console.log("==============================");
+      console.log(data);
+
+        //dateHistry.text(data.)
+    }
+  })
+}
