@@ -46,7 +46,7 @@ let idWeatherCondition4=$("#weatherCondition4");
 const searchButtonOnclicked  = ()=>{
 
     const city = document.getElementById("searchField").value;
-    const url =  ` http://api.weatherapi.com/v1/current.json?key=811fbc17af7e4e02a4a111501232209&q=${city}`
+    const url =  ` https://api.weatherapi.com/v1/current.json?key=811fbc17af7e4e02a4a111501232209&q=${city}`
 
           fetch(url).then (response=>response.json())
                     .then(data => displayTemperature(data))
@@ -76,7 +76,7 @@ const displayTemperature=temparature => {
 
     $.ajax({
       method : "GET",
-      url : ` http://api.weatherapi.com/v1/forecast.json?key=811fbc17af7e4e02a4a111501232209&days=5&q=${city}`,
+      url : ` https://api.weatherapi.com/v1/forecast.json?key=811fbc17af7e4e02a4a111501232209&days=5&q=${city}`,
       success :(data) =>{
         console.log("==============================");
         console.log(data);
