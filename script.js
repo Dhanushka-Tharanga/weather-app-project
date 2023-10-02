@@ -128,23 +128,8 @@ const displayTemperature=temparature => {
 
       }
     })
-    weatherHistryData(city);
+  
     
   }
 
-//==================================================================Histrical weather data=======================================================    
-function weatherHistryData(city){
-
-let dateHistry =$("#dateHistry");
-
-  $.ajax({
-    method : "GET",
-    url : ` http://api.weatherapi.com/v1/history.json?key=811fbc17af7e4e02a4a111501232209&dt=2023-09-01&q=${city}`,
-    success :(data) =>{
-      console.log("==============================");
-      console.log(data);
-
-        //dateHistry.text(data.)
-    }
-  })
-}
+//========================================================================================================================    
